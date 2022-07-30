@@ -17,7 +17,7 @@ const routes: Routes = [
    {path:'players',component: TableComponent},
    {path:'players/:id', component:InfoComponent},
   // children:[{path:'player/:id', component:InfoComponent}] },
-   {path:'contact',component:  SubmitComponent}
+   {path:'contact',component:  SubmitComponent},
  
 
 ];
