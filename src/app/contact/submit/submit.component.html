@@ -1,0 +1,36 @@
+<!-- <form> 
+    <div class="input">
+        <label> Email</label>
+        <input type="text" name="email" [(ngModel)]="email">
+      </div>
+      <div class="input">
+        <label> Name</label>
+        <input type="name" name="name" [(ngModel)]="name">
+          </div>
+          <div class="input">
+            <label> Message</label>
+            <input type="message" name="message" [(ngModel)]="message">
+              </div>
+              <div class="input">
+                <label> Message</label>
+                <input type="submit" value="submit" (click)="usersubmit()">
+                  </div>
+</form> -->
+<app-systemstatus></app-systemstatus>
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <form fxLayout ="Column" > 
+            <mat-form-field>
+                <input matInput placeholder="Email" name="email" [(ngModel)]="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Name" name="name" [(ngModel)]="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Message" name="message" [(ngModel)]="message">
+            </mat-form-field>
+            <button mat-button type="submit" (click)="usersubmit()"> Submit</button>
+        </form>
+    </mat-card>
+
+</div>

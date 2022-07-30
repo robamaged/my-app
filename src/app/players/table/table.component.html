@@ -1,0 +1,45 @@
+
+<app-systemstatus> </app-systemstatus>
+
+      <div class="container">
+       
+        <div class="seacrh-container"> 
+
+     
+      <mat-form-field appearance="fill">
+        <mat-label>search</mat-label>
+        <input matInput placeholder="search" formControlName="search"  (keyup)="filterData($event)">
+      </mat-form-field>
+        <!-- <input (keyup)="applyFilter($event.target.value)" matInput placeholder="Filter"> -->
+        <!-- <input (keyup)="applyFilter($any($event.target).value)"matInput placeholder="Filter"> -->
+
+       
+        </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+      <ng-container matColumnDef="demo-name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+      
+        <!-- shop Column -->
+        <ng-container matColumnDef="demo-shop">
+          <th mat-header-cell *matHeaderCellDef> Shop </th>
+          <td mat-cell *matCellDef="let element"> {{element.shop}} </td>
+        </ng-container>
+      
+        <!-- points Column -->
+        <ng-container matColumnDef="demo-points">
+          <th mat-header-cell *matHeaderCellDef> Points </th>
+          <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+        </ng-container>
+      
+      
+        <router-outlet id="info"></router-outlet> //new
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row  *matRowDef="let row; columns: displayedColumns;" (click)="onclick(row)" routerLink ="/players/info"></tr>
+      </table>
+
+    </div>
+    <!-- <app-info [parentData]="info"></app-info> -->
